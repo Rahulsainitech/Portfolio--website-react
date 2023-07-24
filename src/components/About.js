@@ -32,6 +32,7 @@ const About = () => {
             history.push('/signin')
         }
     }
+    
     useEffect(() => {
         callAboutPage();
     }, []);
