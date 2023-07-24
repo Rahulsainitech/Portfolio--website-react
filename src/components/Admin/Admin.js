@@ -48,7 +48,7 @@ const Admin = () => {
                                             messages.map((msg) => {
                                             return (<h6>{msg.message}</h6>)
                                         })}</td>
-                                        <td><a href={"mailto"+':'+email}><i class="fas fa-location-arrow"/></a></td>
+                                        <td><a href={"mailto:"+email}><i class="fas fa-location-arrow"/></a></td>
                                     </tr>
                                 )
                             })

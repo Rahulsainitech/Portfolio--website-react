@@ -35,7 +35,7 @@ const About = () => {
     
     useEffect(() => {
         callAboutPage();
-    }, []);
+    });
     return (
         <>
             <section className="about ">

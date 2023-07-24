@@ -33,7 +33,7 @@ const Contact = () => {
     }
     useEffect(() => {
         userContact();
-    }, []);
+    });
 
     const handleInput = (e) => {
         const name = e.target.name
@@ -51,10 +51,10 @@ const Contact = () => {
             body: JSON.stringify({ name, email, message })
         })
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
 
         if (res.status===201) {
-            console.log("message not send")
+            // console.log("message not send")
             alert(data.error)
         } else {
             alert("message sent")

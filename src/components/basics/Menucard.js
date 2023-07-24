@@ -9,7 +9,7 @@ const Menucard = ({ menuData }) => {
                 <div className="row d-flex ">
                     
                     {menuData.map((curElem) => {
-                        const { heading, para, image, link,title } = curElem;
+                        const {para, image, link,title } = curElem;
                         return (
                             <>
                                 <div className="maincontainer">
