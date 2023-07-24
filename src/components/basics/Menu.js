@@ -1,4 +1,4 @@
-import propic from '../../images/4.jpeg'
+// import propic from '../../images/4.jpeg'
 import img1 from '../../images/6.png'
 import img2 from '../../images/7.png'
 import img3 from '../../images/8.png'

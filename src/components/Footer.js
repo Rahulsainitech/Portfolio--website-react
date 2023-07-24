@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="footer container-fluid pb-md-5">
                 <div className="container">
                     <div className="row pt-5">
-                        <NavLink className="navbar-brand  col-12" to="#"><span><img src={logo} alt="logo" /></span> <strong>SainiTech</strong></NavLink></div>
+                        <NavLink className="navbar-brand  col-12" to="#"><span><img src={logo} alt="logo" /></span> <strong>Rahul Saini</strong></NavLink></div>
 
                     <div className="row mt-2">
                         <div className="col-4 col-md-3">

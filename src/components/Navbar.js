@@ -3,9 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { NavLink } from 'react-router-dom';
 import logo from '../images/3.png';
 import { UserContext } from '../App';
-
 const Navbar = () => {
-  const { state, dispatch } = useContext(UserContext)
+  const { state} = useContext(UserContext)
   console.log(state)
   if (state) {
     return (

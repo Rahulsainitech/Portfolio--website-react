@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import signpic from '../images/1.png'
-import { NavLink, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Footer from './Footer';
-
-
 
 const Register = () => {
     const history = useHistory();

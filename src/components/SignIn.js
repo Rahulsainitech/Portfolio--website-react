@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Footer from './Footer';
 import { UserContext } from '../App';
 const Login = () => {
-    const { state, dispatch } = useContext(UserContext)
+    const {  dispatch } = useContext(UserContext)
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
