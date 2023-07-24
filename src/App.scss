@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+@mixin flexprop(){
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+// front page 
+.hmt{
+    background-image: linear-gradient(rgb(26, 25, 25),rgb(32, 31, 31));
+}
+//Navbar bg
+.bgc{
+    // background-image: linear-gradient(to right,rgb(108, 4, 156),rgb(214, 17, 240), rgb(255, 255, 255));
+    background-image: linear-gradient(to right,rgb(15, 15, 15),rgb(57, 54, 54));
+}
+.nav-link{
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    color: white !important;
+}
+.navbar-brand{
+    strong{
+        text-shadow:1px 2px white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color:rgb(75, 20, 204) !important;
+    }
+    span{
+   
+    img{
+        transition: linear;
+    animation: rotate 3s infinite linear;
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+               }
+           100%{
+               transform: rotate(360deg);
+           }
+    }
+    }
+    
+}
+}
+.chats{
+    position: fixed;
+    bottom: 1.5rem ;
+    right: 1rem;
+    padding: .5rem .6rem;
+    background-color:rgb(70, 214, 34);
+    border-radius: 50%;
+    z-index: 1;
+    i{
+        font-size: 2rem;
+        color: white;
+    }
+
+}
+.about{
+    margin-top: 7rem;
+    .container{
+        margin-top: 10vh;
+        border: 1px solid rgb(139, 136, 136);
+        box-shadow: 3px 2px 5px rgb(235, 231, 231);
+        
+        @media only screen and (max-width:576px) {
+            .profile_head{
+                @include flexprop();
+                flex-direction:column;
+                
+               
+            }
+        }
+    }
+}
+.navbar1{
+    @include flexprop();
+    .btn-group{
+        border-radius: 2rem;
+       
+        button{
+            padding:1rem 2.8rem;
+            border: none;
+            &:hover{
+                border-bottom: 4px solid black;
+            }
+        }
+        @media only screen and (max-width:600px) {
+            .btn-group__item{
+                padding: 0;
+                display: none;
+            }
+            
+        }
+    }
+}
+.project{
+    .row{
+        @include flexprop();
+    }
+    
+    /* THE MAINCONTAINER HOLDS EVERYTHING */
+.maincontainer{
+    @include flexprop();
+    width: 290px;
+    height: 320px;
+    background: none;
+    margin:2rem 0;
+    
+  
+  
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+
+    /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #ffc728;
+    color: #000;
+    
+    
+  }
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+    @include flexprop();
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-image: linear-gradient(rgb(40, 40, 39),white,rgb(121, 232, 121));
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+    a{
+        button{
+            padding: 5px;
+            border-radius: 3rem;
+            &:hover{
+                background: transparent;
+            }
+        }
+    }
+  }
+
+       
+        /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+     &:hover{
+    transform: rotateY(180deg);
+  }
+       
+    }
+    
+}
+    
+}
+.img{
+    img{
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    right:0;
+    }
+    @media only screen and (max-width:500px){
+        img{
+            opacity: .5;
+        }
+    }
+}
+.skill{
+    
+        color: white;
+    
+}
+.home-bg{
+   
+    background: url('./images/5.png');
+    background-size: cover;
+    opacity: 1;
+    background-position: right;
+    // background-image:linear-gradient(to right ,rgb(167, 17, 236),white);
+    background-image:linear-gradient(to right ,rgb(0, 0, 0),rgb(43, 36, 44));
+    background-repeat: no-repeat;
+.home{
+    @include flexprop();
+    flex-direction: column;
+    
+    
+    p{
+        font-weight: 800;
+        text-shadow: 2px 2px rg;
+        font-family: 'Carter One', cursive;
+    }
+    h3{
+        letter-spacing: 1rem;
+        font-weight: 990;  
+        color:darkblue;  
+        text-shadow: 3px 3px white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 3rem;
+        }
+    .h2{
+        letter-spacing: .3rem; 
+        text-shadow: 3px 3px black;
+        color: white;
+    }
+    
+    h2{
+        font-family: 'Carter One', cursive;
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Playfair Display', serif;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-shadow: 4px 4px rgb(58, 56, 56);
+        font-weight: 800;
+        animation: animate 3s infinite linear alternate ;
+        color: white;
+        font-size: 3rem;
+        &:after{
+            content: "I am always ready to help you";
+            font-weight: 300;
+            color:lightcyan;
+            font-size: 1.4rem;
+            display: block;
+        }
+        @keyframes animate {
+            0%{
+                opacity: 1;  
+            }
+            100%{
+                color:rgb(54, 12, 241);
+                opacity: 0;
+            }
+           
+
+    } 
+   
+    }
+    @media only screen and (max-width:500px) {
+        h2{
+            font-size: 1.7rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        .img{
+            opacity: .4;
+        }
+    }
+    height: 90vh;
+    
+   
+}}
+.sign{
+    min-height: 100vh;
+    @include flexprop();
+    .row{
+        @include flexprop();
+        border: 1px solid rgb(194, 189, 189);
+        box-shadow: 2px 2px 3px rgb(214, 211, 211);
+        img{
+            width: 100%;
+            height: auto;
+        }
+        
+    form{
+        min-height: 400px;
+        
+        .form-group{
+            display: flex;
+            
+            i{
+                position: relative;
+                top:8px;
+                right: 8px;
+            }
+        }
+    }
+}
+}
+.contact{
+    margin-top: 7rem;
+    .container{
+        margin-top: 10vh;
+        .message{
+           @include flexprop();    
+           border:1px solid rgb(204, 197, 197); 
+           box-shadow: 2px 2px 2px rgb(207, 203, 203);
+        }
+        
+        .row{
+            @include flexprop();
+            .textarea{
+                min-height: 180px;
+            }
+            .d-flex{
+                border: 1px solid rgb(211, 208, 208);
+                
+                i{
+                    color: skyblue;
+               padding: 1rem;
+                font-size: 2rem;
+               }
+            }
+            
+        }
+    }
+}
+.error{
+    .container-fluid{
+        @include flexprop();
+        flex-direction: column;
+        min-height: 95vh;
+        background-image: conic-gradient(black 0deg,white 180deg,black 180deg,white 360deg);
+        // border-radius: 50%;
+        h1{
+            font-size: 15rem;
+            color: rgb(173, 167, 167);
+            font-weight: 1000;
+            text-align: center;
+        }
+        h2{
+            color: red;
+            font-weight: 800;
+            text-align: center;
+        }
+        p{
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}
+
+.procard{
+    @include flexprop();
+    min-height: 50vh;
+    .content{
+        @include flexprop();
+        flex-wrap: wrap;
+       
+        .hexagon{
+            position: relative;
+            width:95px;
+            height: 120px;
+            margin: 50px 20px 70px ;
+            .shape{
+                @include flexprop();
+                height: 100%;
+                width:100%;
+                clip-path: polygon(0 25%,50% 0,100% 25%,100% 75%,50% 100%,0 75%);
+                background-color: lightcyan;   
+                i{
+                    @include flexprop();
+                    font-size: 3rem; 
+                }
+                &:hover{
+                    background: rgb(194, 224, 194);
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    // background:rgb(44, 42, 42);
+    background: rgb(15, 15, 15);
+    h3{
+        color: white;
+    }
+    a{
+        color: red;
+    }
+    p{
+        color:red;
+    }
+    .icon{
+        @include flexprop();
+        a{
+            color:red;
+            margin:7px;
+            padding:2.4px 8px ;
+            font-size: 1.6rem;
+            background:rgb(161, 198, 212);
+            border-radius: 50%;
+        }
+        
+    }
+}
+.thefront{
+    img{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(166, 166, 198);
+    }
+}

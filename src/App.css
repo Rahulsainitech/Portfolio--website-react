@@ -1,38 +1,606 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hmt {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0f0f0f), to(#201f1f));
+  background-image: linear-gradient(#0f0f0f, #201f1f);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bgc {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0f0f0f), to(#393636));
+  background-image: linear-gradient(to right, #0f0f0f, #393636);
+}
+
+.nav-link {
+  font-weight: 800;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  color: white !important;
+}
+
+.navbar-brand strong {
+  text-shadow: 1px 2px white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #4b14cc !important;
+}
+
+.navbar-brand span img {
+  -webkit-transition: linear;
+  transition: linear;
+  -webkit-animation: rotate 3s infinite linear;
+          animation: rotate 3s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.chats {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  padding: .5rem .6rem;
+  background-color: #46d622;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.chats i {
+  font-size: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about {
+  margin-top: 7rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.about .container {
+  margin-top: 10vh;
+  border: 1px solid #8b8888;
+  -webkit-box-shadow: 3px 2px 5px #ebe7e7;
+          box-shadow: 3px 2px 5px #ebe7e7;
+}
+
+@media only screen and (max-width: 576px) {
+  .about .container .profile_head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
+.navbar1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar1 .btn-group {
+  border-radius: 2rem;
+}
+
+.navbar1 .btn-group button {
+  padding: 1rem 2.8rem;
+  border: none;
+}
+
+.navbar1 .btn-group button:hover {
+  border-bottom: 4px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar1 .btn-group .btn-group__item {
+    padding: 0;
+    display: none;
+  }
+}
+
+.project {
+  /* THE MAINCONTAINER HOLDS EVERYTHING */
+}
+
+.project .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project .maincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 290px;
+  height: 320px;
+  background: none;
+  margin: 2rem 0;
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+}
+
+.project .maincontainer .thecard {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+}
+
+.project .maincontainer .thecard .thefront {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+  background: #ffc728;
+  color: #000;
+}
+
+.project .maincontainer .thecard .theback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#282827), color-stop(white), to(#79e879));
+  background-image: linear-gradient(#282827, white, #79e879);
+  color: #333;
+  text-align: center;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.project .maincontainer .thecard .theback a button {
+  padding: 5px;
+  border-radius: 3rem;
+}
+
+.project .maincontainer .thecard .theback a button:hover {
+  background: transparent;
+}
+
+.project .maincontainer .thecard:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.img img {
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .img img {
+    opacity: .5;
+  }
+}
+
+.skill {
+  color: white;
+}
+
+.home-bg {
+  background: url("./images/5.png");
+  background-size: cover;
+  opacity: 1;
+  background-position: right;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(#2b242c));
+  background-image: linear-gradient(to right, black, #2b242c);
+  background-repeat: no-repeat;
+}
+
+.home-bg .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+}
+
+.home-bg .home p {
+  font-weight: 800;
+  text-shadow: 2px 2px rg;
+  font-family: 'Carter One', cursive;
+}
+
+.home-bg .home h3 {
+  letter-spacing: 1rem;
+  font-weight: 990;
+  color: darkblue;
+  text-shadow: 3px 3px white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 3rem;
+}
+
+.home-bg .home .h2 {
+  letter-spacing: .3rem;
+  text-shadow: 3px 3px black;
+  color: white;
+}
+
+.home-bg .home h2 {
+  font-family: 'Carter One', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 4px 4px #3a3838;
+  font-weight: 800;
+  -webkit-animation: animate 3s infinite linear alternate;
+          animation: animate 3s infinite linear alternate;
+  color: white;
+  font-size: 3rem;
+}
+
+.home-bg .home h2:after {
+  content: "I am always ready to help you";
+  font-weight: 300;
+  color: lightcyan;
+  font-size: 1.4rem;
+  display: block;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    color: #360cf1;
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    color: #360cf1;
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home-bg .home h2 {
+    font-size: 1.7rem;
+  }
+  .home-bg .home h3 {
+    font-size: 2rem;
+  }
+  .home-bg .home .img {
+    opacity: .4;
+  }
+}
+
+.sign {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #c2bdbd;
+  -webkit-box-shadow: 2px 2px 3px #d6d3d3;
+          box-shadow: 2px 2px 3px #d6d3d3;
+}
+
+.sign .row img {
+  width: 100%;
+  height: auto;
+}
+
+.sign .row form {
+  min-height: 400px;
+}
+
+.sign .row form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign .row form .form-group i {
+  position: relative;
+  top: 8px;
+  right: 8px;
+}
+
+.contact {
+  margin-top: 7rem;
+}
+
+.contact .container {
+  margin-top: 10vh;
+}
+
+.contact .container .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ccc5c5;
+  -webkit-box-shadow: 2px 2px 2px #cfcbcb;
+          box-shadow: 2px 2px 2px #cfcbcb;
+}
+
+.contact .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .container .row .textarea {
+  min-height: 180px;
+}
+
+.contact .container .row .d-flex {
+  border: 1px solid #d3d0d0;
+}
+
+.contact .container .row .d-flex i {
+  color: skyblue;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.error .container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 95vh;
+  background-image: conic-gradient(black 0deg, white 180deg, black 180deg, white 360deg);
+}
+
+.error .container-fluid h1 {
+  font-size: 15rem;
+  color: #ada7a7;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.error .container-fluid h2 {
+  color: red;
+  font-weight: 800;
+  text-align: center;
+}
+
+.error .container-fluid p {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.procard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 50vh;
+}
+
+.procard .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.procard .content .hexagon {
+  position: relative;
+  width: 95px;
+  height: 120px;
+  margin: 50px 20px 70px;
+}
+
+.procard .content .hexagon .shape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+          clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  background-color: lightcyan;
+}
+
+.procard .content .hexagon .shape i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+}
+
+.procard .content .hexagon .shape:hover {
+  background: #c2e0c2;
+}
+
+.footer {
+  background: #0f0f0f;
+}
+
+.footer h3 {
+  color: white;
+}
+
+.footer a {
+  color: red;
+}
+
+.footer p {
+  color: red;
+}
+
+.footer .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .icon a {
+  color: red;
+  margin: 7px;
+  padding: 2.4px 8px;
+  font-size: 1.6rem;
+  background: #a1c6d4;
+  border-radius: 50%;
+}
+
+.thefront img {
+  height: 100%;
+  width: 100%;
+  background-color: #a6a6c6;
+}
+/*# sourceMappingURL=App.css.map */
